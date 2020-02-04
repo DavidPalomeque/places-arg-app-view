@@ -10,8 +10,8 @@ export class UserService {
 
   constructor(public http : HttpClient , public router : Router) { }
 
-  URL_API = "http://localhost:3029"
-  // URL_API = "https://places-arg-app.herokuapp.com"
+  URL_API = "https://places-arg-app-server.herokuapp.com"
+  // URL_API = "http://localhost:3029"
 
   registration(userData){
     return this.http.post<any>(this.URL_API + "/registration" , userData)
