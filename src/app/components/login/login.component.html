@@ -1,0 +1,22 @@
+<!-- LOGIN FORM VIEW -->
+<div class="row" style="height:100vh;">
+    <div class="col s12 col offset-m3 m6 col offset-l4 l4">
+        <div class="card" style="margin-top:50px;">
+            <div class="card-content">
+                <span class="card-title" style="text-align:center;">LOGIN</span>
+                <div class="input-field">
+                    <input id="email" type="email" class="validate" [(ngModel)]="userData.email">
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-field">
+                    <input id="password" type="password" class="validate" [(ngModel)]="userData.password">
+                    <label for="password">Password</label>
+                </div>
+                <div style="text-align:center;">
+                    <button class="btn waves-effect waves-light" type="submit" style="width:100%;margin-bottom:10px;background-color:#ED553B;" (click)="login()">SIGN IN</button>
+                    <p>If you don´t have an account yet , click <a routerLink="/registration">here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

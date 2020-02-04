@@ -1,0 +1,66 @@
+#image {
+    margin-left: auto;
+    height: 450px;
+}
+#card {
+    height: 450px;
+}
+#row {
+    margin-top: 20px;
+}
+#title {
+    font-size: 40px;
+}
+#button {
+    text-align: center;
+    width: 20%;
+    margin-top: 15px;
+}
+img {
+    height: 400px;
+}
+
+@media only screen and (max-width: 900px) {
+    #image {
+        height: 350px;
+    }
+    #card {
+        height: 350px;
+        margin-top: 0px;
+    }
+    #title {
+        font-size: 20px;
+    }
+    #button {
+        width: 60%;
+    }
+    img {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #image {
+        margin-left: 0px;
+        height: 300px;
+    }
+    #card {
+        width: 95%;
+        margin-left: 10px;
+        margin-top: 0px;
+        height: auto;
+        text-align: center;
+    }
+    #title {
+        font-size: 20px;
+    }
+    #description {
+        display: none;
+    }
+    #button {
+        width: 80%;
+    }
+    img {
+        height: 200px;
+    }
+}

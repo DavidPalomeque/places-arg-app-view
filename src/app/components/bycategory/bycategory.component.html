@@ -1,0 +1,57 @@
+<!-- CATEGORY BUTTONS VIEW -->
+<div class="row" *ngIf="show==1" style="text-align:center;">
+    <div class="col s12">
+        <h4>CHOOSE A CATEGORY</h4>
+    </div>
+    <div class="col offset-s1 s10 offset-s1 col m6 col l3">
+        <button style="width:100%;background-color:#ED553B" class="waves-effect waves-light btn" id="button" (click)="getAllByCategory('patagonia')">PATAGONIA</button>        
+    </div>
+    <div class="col offset-s1 s10 offset-s1 col m6 col l3">
+        <button style="width:100%;background-color:#ED553B" class="waves-effect waves-light btn" id="button" (click)="getAllByCategory('urban')">URBAN</button>        
+    </div>
+    <div class="col offset-s1 s10 offset-s1 col m6 col l3">
+        <button style="width:100%;background-color:#ED553B" class="waves-effect waves-light btn" id="button" (click)="getAllByCategory('los andes')">LOS ANDES</button>        
+    </div>
+    <div class="col offset-s1 s10 offset-s1 col m6 col l3">
+        <button style="width:100%;background-color:#ED553B" class="waves-effect waves-light btn" id="button" (click)="getAllByCategory('north')">NORTH</button>        
+    </div>
+</div>
+
+<!-- ALL PLACES BY CATEGORY VIEW -->
+<div *ngIf="show==1">
+    <div class="row" *ngFor="let place of places" id="row">
+        <img class="col s12 col m6 col l5" src="{{place.image}}" id="image">
+        <div class="card col s12 col m6 col l7" id="card">
+            <div class="card-content">
+                <span class="title" id="title">{{place.name}}</span>
+                <p id="description">{{place.description}}</p>
+                <button style="background-color:#ED553B;" class="waves-effect waves-light btn" id="button" (click)="getOneById(place._id)">MORE !</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ONE PLACE VIEW -->
+<div class="row" *ngIf="show==2" id="row">
+    <div class="col s12 col m3 col l2">
+        <button class="waves-effect waves-light btn" id="button" (click)="reloadPage()" style="width:100%;background-color:#ED553B"><==</button>
+    </div>
+</div>
+<div  class="row" *ngIf="show==2" id="row" style="background-color: #e0e0e0;">
+    <img class="col s12 col m6 col l5" src="{{getOnePlace.image}}" id="image">
+        <div class="card col s12 col m6 col l7" id="card">
+            <div class="card-content">
+                <span class="title" id="title">{{getOnePlace.name}}</span>
+                <p id="description2">{{getOnePlace.description}}</p>
+            </div>
+        </div>
+        <div class="col s12 col m6">
+            <img src="{{getOnePlace.images[0]}}" width="100%">
+        </div>
+        <div class="col s12 col m6">
+            <img src="{{getOnePlace.images[1]}}" width="100%">
+        </div>
+        <div class="col s12 col offset-m3 m6 offset-m3">
+            <img src="{{getOnePlace.images[2]}}" width="100%">
+        </div>
+</div>
