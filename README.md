@@ -12,3 +12,5 @@ git clone
 npm install
 
 ng serve (maybe you need to modify the start script in package json to ng serve)
+
+see : http://localhost:4200
